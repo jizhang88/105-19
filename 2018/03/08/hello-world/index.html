@@ -57,13 +57,46 @@ h1>*,h2>*,h3>*,h4>*,h5>*,h6>*{font-family:,Kai,FangSong;}
 </style>
 <!-- WP SinoType plugin typography -->
 
-<link rel="icon" href="/105-19/wp-content/uploads/2018/04/cropped-logo-32x32.png" sizes="32x32" />
+			<style type="text/css" media="screen">
+				/**
+				 * Plugin Name: Subtitles
+				 * Plugin URI: http://wordpress.org/plugins/subtitles/
+				 * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
+				 * Author: We Cobble
+				 * Author URI: https://wecobble.com/
+				 * Version: 2.2.0
+				 * License: GNU General Public License v2 or later
+				 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+				 */
+
+				/**
+				 * Be explicit about this styling only applying to spans,
+				 * since that's the default markup that's returned by
+				 * Subtitles. If a developer overrides the default subtitles
+				 * markup with another element or class, we don't want to stomp
+				 * on that.
+				 *
+				 * @since 1.0.0
+				 */
+				span.entry-subtitle {
+					display: block; /* Put subtitles on their own line by default. */
+					font-size: 0.53333333333333em; /* Sensible scaling. It's assumed that post titles will be wrapped in heading tags. */
+				}
+				/**
+				 * If subtitles are shown in comment areas, we'll hide them by default.
+				 *
+				 * @since 1.0.5
+				 */
+				#comments .comments-title span.entry-subtitle {
+					display: none;
+				}
+			</style><link rel="icon" href="/105-19/wp-content/uploads/2018/04/cropped-logo-32x32.png" sizes="32x32" />
 <link rel="icon" href="/105-19/wp-content/uploads/2018/04/cropped-logo-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon-precomposed" href="/105-19/wp-content/uploads/2018/04/cropped-logo-180x180.png" />
 <meta name="msapplication-TileImage" content="/wp-content/uploads/2018/04/cropped-logo-270x270.png" />
 <!-- OceanWP CSS -->
 <style type="text/css">
-/* General CSS */@media only screen and (min-width:960px){.content-area,.content-left-sidebar .content-area{width:100%}}/* Header CSS */#site-logo #site-logo-inner,.oceanwp-social-menu .social-menu-inner,#site-header.full_screen-header .menu-bar-inner,.after-header-content .after-header-content-inner{height:138px}#site-navigation-wrap .dropdown-menu >li >a,#oceanwp-mobile-menu-icon a,.after-header-content-inner >a{line-height:138px}#site-header{border-color:#81d742}#site-header-inner{padding:5px}#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:108px}@media (max-width:480px){#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:476px}}#site-header #site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:276px}@media (max-width:480px){#site-header #site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:462px}}#site-navigation-wrap .dropdown-menu >li >a{padding:0 10px}/* Footer Widgets CSS */#footer-widgets{background-color:#ffffff}/* Footer Bottom CSS */#footer-bottom{background-color:#3eff1c}/* Typography CSS */body{font-size:44px;line-height:1.7;letter-spacing:.2px}#site-logo a.site-logo-text{font-family:Permanent Marker;font-size:49px;line-height:1.9;letter-spacing:4.5px}#site-navigation-wrap .dropdown-menu >li >a,#site-header.full_screen-header .fs-dropdown-menu >li >a,#site-header.top-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.center-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.medium-header #site-navigation-wrap .dropdown-menu >li >a,#oceanwp-mobile-menu-icon a{font-family:Times New Roman,Times,serif;font-weight:700;font-style:italic;font-size:23px;letter-spacing:1px}.sidr-class-dropdown-menu li a,a.sidr-class-toggle-sidr-close,#mobile-dropdown ul li a,body #mobile-fullscreen ul li a{line-height:1.5}.page-header .page-header-title,.page-header.background-image-page-header .page-header-title{font-family:Times New Roman,Times,serif;font-weight:700;font-style:italic;font-size:31px;line-height:2.1;letter-spacing:.6px}
+/* General CSS */@media only screen and (min-width:960px){.content-area,.content-left-sidebar .content-area{width:100%}}/* Header CSS */#site-logo #site-logo-inner,.oceanwp-social-menu .social-menu-inner,#site-header.full_screen-header .menu-bar-inner,.after-header-content .after-header-content-inner{height:138px}#site-navigation-wrap .dropdown-menu >li >a,#oceanwp-mobile-menu-icon a,.after-header-content-inner >a{line-height:138px}#site-header{border-color:#81d742}#site-header-inner{padding:5px}#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:108px}@media (max-width:480px){#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:476px}}#site-header #site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:276px}@media (max-width:480px){#site-header #site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:462px}}#site-navigation-wrap .dropdown-menu >li >a{padding:0 10px}/* Footer Widgets CSS */#footer-widgets{background-color:#ffffff}/* Footer Bottom CSS */#footer-bottom{background-color:#3eff1c}/* Typography CSS */body{font-size:44px;line-height:1.7;letter-spacing:.2px}#site-logo a.site-logo-text{font-family:Permanent Marker;font-size:49px;line-height:1.9;letter-spacing:4.5px}#site-navigation-wrap .dropdown-menu >li >a,#site-header.full_screen-header .fs-dropdown-menu >li >a,#site-header.top-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.center-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.medium-header #site-navigation-wrap .dropdown-menu >li >a,#oceanwp-mobile-menu-icon a{font-family:Times New Roman,Times,serif;font-weight:700;font-style:italic;font-size:23px;letter-spacing:1px}.sidr-class-dropdown-menu li a,a.sidr-class-toggle-sidr-close,#mobile-dropdown ul li a,body #mobile-fullscreen ul li a{line-height:1.5}.page-header .page-header-title,.page-header.background-image-page-header .page-header-title{font-family:Times New Roman,Times,serif;font-weight:700;font-style:italic;font-size:31px;line-height:2.1;letter-spacing:.6px}.page-header .page-subheading{font-family:Times New Roman,Times,serif;font-style:italic;font-size:18px;color:#bf00d1;letter-spacing:.6px}
 </style></head>
 
 <body class="post-template-default single single-post postid-1 single-format-standard wp-custom-logo oceanwp-theme sidebar-mobile content-full-width content-max-width post-in-category-uncategorized no-header-border default-breakpoint has-breadcrumbs has-fixed-footer has-parallax-footer elementor-default">

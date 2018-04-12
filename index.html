@@ -38,7 +38,7 @@ img.emoji {
 <link rel='stylesheet' id='elementor-animations-css'  href='/105-19/wp-content/plugins/elementor/assets/css/animations.min.css?ver=1.9.8' type='text/css' media='all' />
 <link rel='stylesheet' id='elementor-frontend-css'  href='/105-19/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=1.9.8' type='text/css' media='all' />
 <link rel='stylesheet' id='elementor-global-css'  href='/105-19/wp-content/uploads/elementor/css/global.css?ver=1522468233' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-post-173-css'  href='/105-19/wp-content/uploads/elementor/css/post-173.css?ver=1523501368' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-173-css'  href='/105-19/wp-content/uploads/elementor/css/post-173.css?ver=1523505056' type='text/css' media='all' />
 <link rel='stylesheet' id='oe-widgets-style-css'  href='/105-19/wp-content/plugins/ocean-extra/assets/css/widgets.css?ver=4.9.5' type='text/css' media='all' />
 <script type='text/javascript' src='/105-19/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
 <script type='text/javascript' src='/105-19/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
@@ -60,13 +60,46 @@ h1>*,h2>*,h3>*,h4>*,h5>*,h6>*{font-family:,Kai,FangSong;}
 </style>
 <!-- WP SinoType plugin typography -->
 
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"><link rel="icon" href="/105-19/wp-content/uploads/2018/04/cropped-logo-32x32.png" sizes="32x32" />
+			<style type="text/css" media="screen">
+				/**
+				 * Plugin Name: Subtitles
+				 * Plugin URI: http://wordpress.org/plugins/subtitles/
+				 * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
+				 * Author: We Cobble
+				 * Author URI: https://wecobble.com/
+				 * Version: 2.2.0
+				 * License: GNU General Public License v2 or later
+				 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+				 */
+
+				/**
+				 * Be explicit about this styling only applying to spans,
+				 * since that's the default markup that's returned by
+				 * Subtitles. If a developer overrides the default subtitles
+				 * markup with another element or class, we don't want to stomp
+				 * on that.
+				 *
+				 * @since 1.0.0
+				 */
+				span.entry-subtitle {
+					display: block; /* Put subtitles on their own line by default. */
+					font-size: 0.53333333333333em; /* Sensible scaling. It's assumed that post titles will be wrapped in heading tags. */
+				}
+				/**
+				 * If subtitles are shown in comment areas, we'll hide them by default.
+				 *
+				 * @since 1.0.5
+				 */
+				#comments .comments-title span.entry-subtitle {
+					display: none;
+				}
+			</style><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"><link rel="icon" href="/105-19/wp-content/uploads/2018/04/cropped-logo-32x32.png" sizes="32x32" />
 <link rel="icon" href="/105-19/wp-content/uploads/2018/04/cropped-logo-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon-precomposed" href="/105-19/wp-content/uploads/2018/04/cropped-logo-180x180.png" />
 <meta name="msapplication-TileImage" content="/wp-content/uploads/2018/04/cropped-logo-270x270.png" />
 <!-- OceanWP CSS -->
 <style type="text/css">
-/* General CSS */@media only screen and (min-width:960px){.content-area,.content-left-sidebar .content-area{width:100%}}/* Header CSS */#site-logo #site-logo-inner,.oceanwp-social-menu .social-menu-inner,#site-header.full_screen-header .menu-bar-inner,.after-header-content .after-header-content-inner{height:138px}#site-navigation-wrap .dropdown-menu >li >a,#oceanwp-mobile-menu-icon a,.after-header-content-inner >a{line-height:138px}#site-header{border-color:#81d742}#site-header-inner{padding:5px}#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:108px}@media (max-width:480px){#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:476px}}#site-header #site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:276px}@media (max-width:480px){#site-header #site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:462px}}#site-navigation-wrap .dropdown-menu >li >a{padding:0 10px}/* Footer Widgets CSS */#footer-widgets{background-color:#ffffff}/* Footer Bottom CSS */#footer-bottom{background-color:#3eff1c}/* Typography CSS */body{font-size:44px;line-height:1.7;letter-spacing:.2px}#site-logo a.site-logo-text{font-family:Permanent Marker;font-size:49px;line-height:1.9;letter-spacing:4.5px}#site-navigation-wrap .dropdown-menu >li >a,#site-header.full_screen-header .fs-dropdown-menu >li >a,#site-header.top-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.center-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.medium-header #site-navigation-wrap .dropdown-menu >li >a,#oceanwp-mobile-menu-icon a{font-family:Times New Roman,Times,serif;font-weight:700;font-style:italic;font-size:23px;letter-spacing:1px}.sidr-class-dropdown-menu li a,a.sidr-class-toggle-sidr-close,#mobile-dropdown ul li a,body #mobile-fullscreen ul li a{line-height:1.5}.page-header .page-header-title,.page-header.background-image-page-header .page-header-title{font-family:Times New Roman,Times,serif;font-weight:700;font-style:italic;font-size:31px;line-height:2.1;letter-spacing:.6px}
+/* General CSS */@media only screen and (min-width:960px){.content-area,.content-left-sidebar .content-area{width:100%}}/* Header CSS */#site-logo #site-logo-inner,.oceanwp-social-menu .social-menu-inner,#site-header.full_screen-header .menu-bar-inner,.after-header-content .after-header-content-inner{height:138px}#site-navigation-wrap .dropdown-menu >li >a,#oceanwp-mobile-menu-icon a,.after-header-content-inner >a{line-height:138px}#site-header{border-color:#81d742}#site-header-inner{padding:5px}#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:108px}@media (max-width:480px){#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:476px}}#site-header #site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:276px}@media (max-width:480px){#site-header #site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:462px}}#site-navigation-wrap .dropdown-menu >li >a{padding:0 10px}/* Footer Widgets CSS */#footer-widgets{background-color:#ffffff}/* Footer Bottom CSS */#footer-bottom{background-color:#3eff1c}/* Typography CSS */body{font-size:44px;line-height:1.7;letter-spacing:.2px}#site-logo a.site-logo-text{font-family:Permanent Marker;font-size:49px;line-height:1.9;letter-spacing:4.5px}#site-navigation-wrap .dropdown-menu >li >a,#site-header.full_screen-header .fs-dropdown-menu >li >a,#site-header.top-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.center-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.medium-header #site-navigation-wrap .dropdown-menu >li >a,#oceanwp-mobile-menu-icon a{font-family:Times New Roman,Times,serif;font-weight:700;font-style:italic;font-size:23px;letter-spacing:1px}.sidr-class-dropdown-menu li a,a.sidr-class-toggle-sidr-close,#mobile-dropdown ul li a,body #mobile-fullscreen ul li a{line-height:1.5}.page-header .page-header-title,.page-header.background-image-page-header .page-header-title{font-family:Times New Roman,Times,serif;font-weight:700;font-style:italic;font-size:31px;line-height:2.1;letter-spacing:.6px}.page-header .page-subheading{font-family:Times New Roman,Times,serif;font-style:italic;font-size:18px;color:#bf00d1;letter-spacing:.6px}
 </style></head>
 
 <body class="home page-template-default page page-id-173 wp-custom-logo oceanwp-theme sidebar-mobile content-full-width content-max-width no-header-border default-breakpoint has-breadcrumbs has-fixed-footer has-parallax-footer elementor-default elementor-page elementor-page-173">
@@ -161,6 +194,10 @@ h1>*,h2>*,h3>*,h4>*,h5>*,h6>*{font-family:,Kai,FangSong;}
 			<h3 class="page-header-title clr" itemprop="headline">105-19 62nd Dr, Forest Hills, NY 11375</h3>
 
 			
+	<div class="clr page-subheading">
+		This beautiful brick townhouse is for rent for $3350 a month	</div><!-- .page-subheading -->
+
+
 		
 		
 	</div><!-- .page-header-inner -->
@@ -214,18 +251,6 @@ h1>*,h2>*,h3>*,h4>*,h5>*,h6>*{font-family:,Kai,FangSong;}
 		</div>
 				</div>
 				</div>
-				<div data-id="2cfeb3a" class="elementor-element elementor-element-2cfeb3a elementor-widget elementor-widget-text-editor" data-element_type="text-editor.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix"><p>This beautiful house is to rent for:</p><p>$3350 a month</p></div>
-				</div>
-				</div>
-				<div data-id="4f7fcee" class="elementor-element elementor-element-4f7fcee elementor-widget elementor-widget-spacer" data-element_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
 						</div>
 			</div>
 		</div>
@@ -238,6 +263,17 @@ h1>*,h2>*,h3>*,h4>*,h5>*,h6>*{font-family:,Kai,FangSong;}
 				<div data-id="3c5f405" class="elementor-element elementor-element-3c5f405 elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
 			<div class="elementor-column-wrap elementor-element-populated">
 					<div class="elementor-widget-wrap">
+				<div data-id="6689de3" class="elementor-element elementor-element-6689de3 elementor-widget elementor-widget-heading" data-element_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-large">Map</h2>		</div>
+				</div>
+				<div data-id="685f160" class="elementor-element elementor-element-685f160 elementor-widget elementor-widget-spacer" data-element_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
 				<div data-id="8d9088d" class="elementor-element elementor-element-8d9088d elementor-widget elementor-widget-google_maps" data-element_type="google_maps.default">
 				<div class="elementor-widget-container">
 			<div class="elementor-custom-embed"><iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=105-19%2062nd%20Dr%2C%20Forest%20Hills%2C%20NY%2011375&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near"></iframe></div>		</div>
@@ -345,6 +381,10 @@ h1>*,h2>*,h3>*,h4>*,h5>*,h6>*{font-family:,Kai,FangSong;}
 				<div data-id="83d268c" class="elementor-element elementor-element-83d268c elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
 			<div class="elementor-column-wrap elementor-element-populated">
 					<div class="elementor-widget-wrap">
+				<div data-id="a17af26" class="elementor-element elementor-element-a17af26 elementor-widget elementor-widget-heading" data-element_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-large">Contact</h2>		</div>
+				</div>
 				<div data-id="8d55a19" class="elementor-element elementor-element-8d55a19 elementor-widget elementor-widget-spacer" data-element_type="spacer.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-spacer">
